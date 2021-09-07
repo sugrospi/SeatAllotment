@@ -1,0 +1,45 @@
+<!-- templates/profile.html -->
+
+{% extends "base.html" %}
+
+{% block content %}
+<h1 class="title">
+  Welcome, {{ name }}!
+</h1>
+<p>kindly choose your prefereneces</p></br>[ALL THREE CHOICES HAVE TO BE DIFFERENT]</br>
+<div class = "box" style="margin:auto;width:35%;padding:10px" >
+<form method="POST" action="/profile">
+    <div class="field">
+        <div class="control" style="margin:auto;width:50%;padding:10px">
+          Choice 1:<select name="C1" style = "width:200px;">
+                <option value="0">E1</option>
+                <option value="1">E2</option>
+                <option value="2">E3</option>
+
+          </select>
+        </div>
+    </div>
+
+    <div class="field">
+        <div class="control"style="margin:auto;width:50%;padding:10px">
+          Choice 2:<select name="C2" style = "width:200px;">
+                <option value="0">E1</option>
+                <option value="1">E2</option>
+                <option value="2">E3</option>
+
+          </select>
+        </div>
+    </div>
+    <div class="field">
+      <div class="control" style="margin:auto;width:50%;padding:10px">
+        Choice 3:<select name="C3" style = "width:200px;">
+              <option value="0">E1</option>
+              <option value="1">E2</option>
+              <option value="2">E3</option>
+        </select>
+      </div>
+    </div>
+    <button class="button is-block is-info" style="margin:auto;width:50%;padding:10px">Submit</button>
+</form>
+</div>
+{% endblock %}
